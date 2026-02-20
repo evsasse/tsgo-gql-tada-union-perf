@@ -1,5 +1,7 @@
 # `gql.tada` union-heavy typechecking repro for `tsgo`
 
+https://github.com/microsoft/typescript-go/issues/2859
+
 This repository is a standalone synthetic repro focused on union/discriminated type pressure from `gql.tada` query typing.
 
 It intentionally avoids framework/runtime factors (Next.js, API calls, route typegen) and keeps the workload pure TypeScript + GraphQL schema generation + `gql.tada` typing.
