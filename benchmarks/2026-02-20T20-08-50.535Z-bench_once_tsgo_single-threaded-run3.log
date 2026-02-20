@@ -1,0 +1,27 @@
+> tsgo-gql-tada-union-perf@0.0.0 bench:once:tsgo:single-threaded
+> npm run lint:clear && npm run lint:tsgo:single-threaded
+
+
+> tsgo-gql-tada-union-perf@0.0.0 lint:clear
+> rm -f tsconfig.tsbuildinfo tsconfig.tsgo.tsbuildinfo
+
+
+> tsgo-gql-tada-union-perf@0.0.0 lint:tsgo:single-threaded
+> tsgo --noEmit --skipLibCheck --incremental --singleThreaded --diagnostics
+
+Files:                    5303
+Lines:                  251775
+Identifiers:            234784
+Symbols:               7709441
+Types:                 1524002
+Instantiations:       32965116
+Memory used:          2976407K
+Memory allocs:        95027866
+Config time:            0.042s
+BuildInfo read time:    0.000s
+Parse time:             0.486s
+Bind time:              0.000s
+Check time:            15.182s
+Emit time:              0.143s
+Changes compute time:   0.095s
+Total time:            15.951s

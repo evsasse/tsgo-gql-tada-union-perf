@@ -1,0 +1,27 @@
+> tsgo-gql-tada-union-perf@0.0.0 bench:once:tsgo
+> npm run lint:clear && npm run lint:tsgo
+
+
+> tsgo-gql-tada-union-perf@0.0.0 lint:clear
+> rm -f tsconfig.tsbuildinfo tsconfig.tsgo.tsbuildinfo
+
+
+> tsgo-gql-tada-union-perf@0.0.0 lint:tsgo
+> tsgo --noEmit --skipLibCheck --incremental --diagnostics
+
+Files:                    296
+Lines:                 121078
+Identifiers:           112647
+Symbols:               978922
+Types:                 208800
+Instantiations:       2542665
+Memory used:          367930K
+Memory allocs:        4377556
+Config time:           0.001s
+BuildInfo read time:   0.000s
+Parse time:            0.065s
+Bind time:             0.000s
+Check time:            0.613s
+Emit time:             0.004s
+Changes compute time:  0.025s
+Total time:            0.708s

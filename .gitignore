@@ -1,3 +1,5 @@
 node_modules/
 tsconfig.tsbuildinfo
 tsconfig.tsgo.tsbuildinfo
+tmp/
+.DS_Store

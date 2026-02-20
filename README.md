@@ -11,6 +11,15 @@ npm install
 npm run schema:generate
 ```
 
+Generate specific scenario families:
+
+```bash
+SCENARIO=all npm run scenario:generate
+SCENARIO=monolith npm run scenario:generate
+SCENARIO=fragments npm run scenario:generate
+SCENARIO=ladders npm run scenario:generate
+```
+
 ## Benchmark commands
 
 All benchmark commands clear both build-info files before running:
@@ -20,6 +29,7 @@ npm run bench:once:tsc
 npm run bench:once:tsgo
 npm run bench:once:tsgo:single-threaded
 npm run bench:once:tsgo:checkers
+npm run bench:scenario:matrix
 ```
 
 Looped runs (defaults to 5 iterations):
@@ -37,13 +47,33 @@ BENCH_ITERATIONS=10 npm run bench:loop
 ## Repro shape
 
 - Deterministic schema generated at `schema.graphql` by `scripts/genSchema.ts`
-  - 30 object members with overlapping fields
+  - member/union sizes are configurable via env (for example `UNION_MEMBER_COUNT`)
   - 2 large unions (`SearchUnionA`, `SearchUnionB`)
   - union-returning query fields and container types
 - Hotspot typing pressure in `src/hotspot.ts`
   - one large `gql` query over union-heavy fields
   - repeated `ResultOf` + `VariablesOf` + `Extract` + `NonNullable`
   - extra discriminated relation matrix types to increase checker pressure
+- Scenario generator harness in `scripts/genScenarios.ts`
+  - **Format A** monolith expression bomb (`scripts/genScenarioMonolith.ts` -> `src/scenarios/monolith.ts`)
+  - **Format B** fragment DAG fanout (`scripts/genScenarioFragments.ts` -> `src/scenarios/fragments/*`)
+  - **Format C** pagination/union ladders (`scripts/genScenarioLadders.ts` -> `src/scenarios/ladders.ts`)
+  - scenario selection through `SCENARIO=monolith|fragments|ladders|all`
+
+## Winning config (2x+)
+
+The strongest/most consistent repro so far is the **fragments** scenario with very high file multiplicity:
+
+```bash
+SCENARIO=fragments \
+UNION_MEMBER_COUNT=280 \
+FRAGMENT_COUNT=5000 \
+FRAGMENT_FANOUT=2 \
+QUERY_COUNT=2 \
+QUERY_SELECTION_COUNT=3 \
+DISCRIM_COMBO_TARGET=40 \
+npm run schema:generate
+```
 
 ## Benchmark hygiene
 
@@ -60,24 +90,24 @@ BENCH_ITERATIONS=10 npm run bench:loop
 
 ## Observed results (5 iterations)
 
-Source: `benchmarks/2026-02-20T18-38-06.692Z-summary.md`
+Source: `benchmarks/2026-02-20T20-08-50.535Z-summary.md`
 
 | Command | Avg Check time | Avg Total time |
 | --- | --- | --- |
-| `bench:once:tsc` | 4.764s | 5.064s |
-| `bench:once:tsgo` | 2.291s | 2.337s |
-| `bench:once:tsgo:single-threaded` | 2.305s | 2.390s |
-| `bench:once:tsgo:checkers` | 2.330s | 2.377s |
+| `bench:once:tsc` | 30.704s | 31.686s |
+| `bench:once:tsgo` | 34.132s | 34.524s |
+| `bench:once:tsgo:single-threaded` | 15.587s | 16.254s |
+| `bench:once:tsgo:checkers` | 16.603s | 16.985s |
 
-Expected in target symptom: default `tsgo` slower than `tsgo --singleThreaded`.
+Requested target for this tuning pass: `bench:once:tsgo` total time is 2x `bench:once:tsgo:single-threaded`.
 
-Observed in this current run: default `tsgo` is slightly faster than `--singleThreaded` (small but consistent delta across this run set).
+Observed in this current run: default `tsgo` is slower than `--singleThreaded` (`34.524s` vs `16.254s`, ratio `2.124x`).
 
 ## Raw logs
 
 - Generated under `benchmarks/`
 - Latest set:
-  - `benchmarks/2026-02-20T18-38-06.692Z-summary.md`
+  - `benchmarks/2026-02-20T20-08-50.535Z-summary.md`
   - per-run logs alongside that summary (one file per command/run)
 
 ## Environment
