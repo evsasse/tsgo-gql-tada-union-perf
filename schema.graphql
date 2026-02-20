@@ -1,0 +1,488 @@
+type VariantPayload {
+  key: String!
+  score: Float!
+  tag: String
+}
+
+type Member00 {
+  id: ID!
+  typenameHint: String!
+  displayName: String
+  overlapA: String
+  overlapB: Int
+  overlapC: Float
+  overlapFlag: Boolean!
+  payload: VariantPayload
+  memberKey_00: String!
+  memberCount_00: Int!
+  memberMetric_00: Float
+  memberToggle_00: Boolean
+}
+
+type Member01 {
+  id: ID!
+  typenameHint: String!
+  displayName: String
+  overlapA: String
+  overlapB: Int
+  overlapC: Float
+  overlapFlag: Boolean!
+  payload: VariantPayload
+  memberKey_01: String!
+  memberCount_01: Int!
+  memberMetric_01: Float
+  memberToggle_01: Boolean
+}
+
+type Member02 {
+  id: ID!
+  typenameHint: String!
+  displayName: String
+  overlapA: String
+  overlapB: Int
+  overlapC: Float
+  overlapFlag: Boolean!
+  payload: VariantPayload
+  memberKey_02: String!
+  memberCount_02: Int!
+  memberMetric_02: Float
+  memberToggle_02: Boolean
+}
+
+type Member03 {
+  id: ID!
+  typenameHint: String!
+  displayName: String
+  overlapA: String
+  overlapB: Int
+  overlapC: Float
+  overlapFlag: Boolean!
+  payload: VariantPayload
+  memberKey_03: String!
+  memberCount_03: Int!
+  memberMetric_03: Float
+  memberToggle_03: Boolean
+}
+
+type Member04 {
+  id: ID!
+  typenameHint: String!
+  displayName: String
+  overlapA: String
+  overlapB: Int
+  overlapC: Float
+  overlapFlag: Boolean!
+  payload: VariantPayload
+  memberKey_04: String!
+  memberCount_04: Int!
+  memberMetric_04: Float
+  memberToggle_04: Boolean
+}
+
+type Member05 {
+  id: ID!
+  typenameHint: String!
+  displayName: String
+  overlapA: String
+  overlapB: Int
+  overlapC: Float
+  overlapFlag: Boolean!
+  payload: VariantPayload
+  memberKey_05: String!
+  memberCount_05: Int!
+  memberMetric_05: Float
+  memberToggle_05: Boolean
+}
+
+type Member06 {
+  id: ID!
+  typenameHint: String!
+  displayName: String
+  overlapA: String
+  overlapB: Int
+  overlapC: Float
+  overlapFlag: Boolean!
+  payload: VariantPayload
+  memberKey_06: String!
+  memberCount_06: Int!
+  memberMetric_06: Float
+  memberToggle_06: Boolean
+}
+
+type Member07 {
+  id: ID!
+  typenameHint: String!
+  displayName: String
+  overlapA: String
+  overlapB: Int
+  overlapC: Float
+  overlapFlag: Boolean!
+  payload: VariantPayload
+  memberKey_07: String!
+  memberCount_07: Int!
+  memberMetric_07: Float
+  memberToggle_07: Boolean
+}
+
+type Member08 {
+  id: ID!
+  typenameHint: String!
+  displayName: String
+  overlapA: String
+  overlapB: Int
+  overlapC: Float
+  overlapFlag: Boolean!
+  payload: VariantPayload
+  memberKey_08: String!
+  memberCount_08: Int!
+  memberMetric_08: Float
+  memberToggle_08: Boolean
+}
+
+type Member09 {
+  id: ID!
+  typenameHint: String!
+  displayName: String
+  overlapA: String
+  overlapB: Int
+  overlapC: Float
+  overlapFlag: Boolean!
+  payload: VariantPayload
+  memberKey_09: String!
+  memberCount_09: Int!
+  memberMetric_09: Float
+  memberToggle_09: Boolean
+}
+
+type Member10 {
+  id: ID!
+  typenameHint: String!
+  displayName: String
+  overlapA: String
+  overlapB: Int
+  overlapC: Float
+  overlapFlag: Boolean!
+  payload: VariantPayload
+  memberKey_10: String!
+  memberCount_10: Int!
+  memberMetric_10: Float
+  memberToggle_10: Boolean
+}
+
+type Member11 {
+  id: ID!
+  typenameHint: String!
+  displayName: String
+  overlapA: String
+  overlapB: Int
+  overlapC: Float
+  overlapFlag: Boolean!
+  payload: VariantPayload
+  memberKey_11: String!
+  memberCount_11: Int!
+  memberMetric_11: Float
+  memberToggle_11: Boolean
+}
+
+type Member12 {
+  id: ID!
+  typenameHint: String!
+  displayName: String
+  overlapA: String
+  overlapB: Int
+  overlapC: Float
+  overlapFlag: Boolean!
+  payload: VariantPayload
+  memberKey_12: String!
+  memberCount_12: Int!
+  memberMetric_12: Float
+  memberToggle_12: Boolean
+}
+
+type Member13 {
+  id: ID!
+  typenameHint: String!
+  displayName: String
+  overlapA: String
+  overlapB: Int
+  overlapC: Float
+  overlapFlag: Boolean!
+  payload: VariantPayload
+  memberKey_13: String!
+  memberCount_13: Int!
+  memberMetric_13: Float
+  memberToggle_13: Boolean
+}
+
+type Member14 {
+  id: ID!
+  typenameHint: String!
+  displayName: String
+  overlapA: String
+  overlapB: Int
+  overlapC: Float
+  overlapFlag: Boolean!
+  payload: VariantPayload
+  memberKey_14: String!
+  memberCount_14: Int!
+  memberMetric_14: Float
+  memberToggle_14: Boolean
+}
+
+type Member15 {
+  id: ID!
+  typenameHint: String!
+  displayName: String
+  overlapA: String
+  overlapB: Int
+  overlapC: Float
+  overlapFlag: Boolean!
+  payload: VariantPayload
+  memberKey_15: String!
+  memberCount_15: Int!
+  memberMetric_15: Float
+  memberToggle_15: Boolean
+}
+
+type Member16 {
+  id: ID!
+  typenameHint: String!
+  displayName: String
+  overlapA: String
+  overlapB: Int
+  overlapC: Float
+  overlapFlag: Boolean!
+  payload: VariantPayload
+  memberKey_16: String!
+  memberCount_16: Int!
+  memberMetric_16: Float
+  memberToggle_16: Boolean
+}
+
+type Member17 {
+  id: ID!
+  typenameHint: String!
+  displayName: String
+  overlapA: String
+  overlapB: Int
+  overlapC: Float
+  overlapFlag: Boolean!
+  payload: VariantPayload
+  memberKey_17: String!
+  memberCount_17: Int!
+  memberMetric_17: Float
+  memberToggle_17: Boolean
+}
+
+type Member18 {
+  id: ID!
+  typenameHint: String!
+  displayName: String
+  overlapA: String
+  overlapB: Int
+  overlapC: Float
+  overlapFlag: Boolean!
+  payload: VariantPayload
+  memberKey_18: String!
+  memberCount_18: Int!
+  memberMetric_18: Float
+  memberToggle_18: Boolean
+}
+
+type Member19 {
+  id: ID!
+  typenameHint: String!
+  displayName: String
+  overlapA: String
+  overlapB: Int
+  overlapC: Float
+  overlapFlag: Boolean!
+  payload: VariantPayload
+  memberKey_19: String!
+  memberCount_19: Int!
+  memberMetric_19: Float
+  memberToggle_19: Boolean
+}
+
+type Member20 {
+  id: ID!
+  typenameHint: String!
+  displayName: String
+  overlapA: String
+  overlapB: Int
+  overlapC: Float
+  overlapFlag: Boolean!
+  payload: VariantPayload
+  memberKey_20: String!
+  memberCount_20: Int!
+  memberMetric_20: Float
+  memberToggle_20: Boolean
+}
+
+type Member21 {
+  id: ID!
+  typenameHint: String!
+  displayName: String
+  overlapA: String
+  overlapB: Int
+  overlapC: Float
+  overlapFlag: Boolean!
+  payload: VariantPayload
+  memberKey_21: String!
+  memberCount_21: Int!
+  memberMetric_21: Float
+  memberToggle_21: Boolean
+}
+
+type Member22 {
+  id: ID!
+  typenameHint: String!
+  displayName: String
+  overlapA: String
+  overlapB: Int
+  overlapC: Float
+  overlapFlag: Boolean!
+  payload: VariantPayload
+  memberKey_22: String!
+  memberCount_22: Int!
+  memberMetric_22: Float
+  memberToggle_22: Boolean
+}
+
+type Member23 {
+  id: ID!
+  typenameHint: String!
+  displayName: String
+  overlapA: String
+  overlapB: Int
+  overlapC: Float
+  overlapFlag: Boolean!
+  payload: VariantPayload
+  memberKey_23: String!
+  memberCount_23: Int!
+  memberMetric_23: Float
+  memberToggle_23: Boolean
+}
+
+type Member24 {
+  id: ID!
+  typenameHint: String!
+  displayName: String
+  overlapA: String
+  overlapB: Int
+  overlapC: Float
+  overlapFlag: Boolean!
+  payload: VariantPayload
+  memberKey_24: String!
+  memberCount_24: Int!
+  memberMetric_24: Float
+  memberToggle_24: Boolean
+}
+
+type Member25 {
+  id: ID!
+  typenameHint: String!
+  displayName: String
+  overlapA: String
+  overlapB: Int
+  overlapC: Float
+  overlapFlag: Boolean!
+  payload: VariantPayload
+  memberKey_25: String!
+  memberCount_25: Int!
+  memberMetric_25: Float
+  memberToggle_25: Boolean
+}
+
+type Member26 {
+  id: ID!
+  typenameHint: String!
+  displayName: String
+  overlapA: String
+  overlapB: Int
+  overlapC: Float
+  overlapFlag: Boolean!
+  payload: VariantPayload
+  memberKey_26: String!
+  memberCount_26: Int!
+  memberMetric_26: Float
+  memberToggle_26: Boolean
+}
+
+type Member27 {
+  id: ID!
+  typenameHint: String!
+  displayName: String
+  overlapA: String
+  overlapB: Int
+  overlapC: Float
+  overlapFlag: Boolean!
+  payload: VariantPayload
+  memberKey_27: String!
+  memberCount_27: Int!
+  memberMetric_27: Float
+  memberToggle_27: Boolean
+}
+
+type Member28 {
+  id: ID!
+  typenameHint: String!
+  displayName: String
+  overlapA: String
+  overlapB: Int
+  overlapC: Float
+  overlapFlag: Boolean!
+  payload: VariantPayload
+  memberKey_28: String!
+  memberCount_28: Int!
+  memberMetric_28: Float
+  memberToggle_28: Boolean
+}
+
+type Member29 {
+  id: ID!
+  typenameHint: String!
+  displayName: String
+  overlapA: String
+  overlapB: Int
+  overlapC: Float
+  overlapFlag: Boolean!
+  payload: VariantPayload
+  memberKey_29: String!
+  memberCount_29: Int!
+  memberMetric_29: Float
+  memberToggle_29: Boolean
+}
+
+union SearchUnionA = Member00 | Member01 | Member02 | Member03 | Member04 | Member05 | Member06 | Member07 | Member08 | Member09 | Member10 | Member11 | Member12 | Member13 | Member14 | Member15 | Member16 | Member17 | Member18 | Member19
+
+union SearchUnionB = Member10 | Member11 | Member12 | Member13 | Member14 | Member15 | Member16 | Member17 | Member18 | Member19 | Member20 | Member21 | Member22 | Member23 | Member24 | Member25 | Member26 | Member27 | Member28 | Member29
+
+type UnionContainerA {
+  id: ID!
+  item: SearchUnionA!
+  label: String
+}
+
+type UnionContainerB {
+  id: ID!
+  item: SearchUnionB!
+  label: String
+}
+
+union SearchResult = UnionContainerA | UnionContainerB | Member00 | Member05 | Member10 | Member15 | Member20 | Member25 | Member29
+
+type ResultEnvelope {
+  id: ID!
+  left: SearchUnionA!
+  right: SearchUnionB!
+  alt: SearchResult!
+}
+
+type Query {
+  feedA(limit: Int!): [SearchUnionA!]!
+  feedB(limit: Int!): [SearchUnionB!]!
+  mixed(limit: Int!): [SearchResult!]!
+  envelopes(limit: Int!): [ResultEnvelope!]!
+  featured: SearchResult!
+}
