@@ -46,6 +46,18 @@ Custom iteration count:
 BENCH_ITERATIONS=10 npm run bench:loop
 ```
 
+Collect tsgo pprof profiles (default + single-threaded):
+
+```bash
+npm run bench:pprof
+```
+
+This runs tsgo with `--pprofDir .`, then collects updated profile files into a timestamped folder:
+
+- `benchmarks/<timestamp>-pprof/`
+- contains per-command logs and `manifest.md` metadata
+- includes copied profile artifacts for manual upload
+
 ## Repro shape
 
 - Deterministic schema generated at `schema.graphql` by `scripts/genSchema.ts`
@@ -111,6 +123,9 @@ Observed in this current run: default `tsgo` is slower than `--singleThreaded` (
 - Latest set:
   - `benchmarks/2026-02-20T20-08-50.535Z-summary.md`
   - per-run logs alongside that summary (one file per command/run)
+- pprof capture sets:
+  - `benchmarks/<timestamp>-pprof/`
+  - upload files from this folder (especially `manifest.md` and the copied `*cpuprofile.pb.gz` / `*memprofile.pb.gz` files)
 
 ## Environment
 
